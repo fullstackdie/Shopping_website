@@ -1,0 +1,38 @@
+<%- include('../Includes/head.ejs')%>
+    
+    
+  </head>
+
+  <body>
+    <%- include('../Includes/navigation.ejs')%>
+
+<main>
+  <% if(products.length>0){%>
+    
+<ul>
+  <%products.forEach(product=>{%>
+    <div class="card__actions">
+   <li  class="main-header__item2"> <h1><%=product.productData.title%>(<%=product.qty%>)</h1>
+    <div class="card__image2">
+    <img src="<%=product.productData.imageUrl%>" alt="img" >
+    </div>
+  </li>
+   <form action="/cart-delete-item" method="POST">
+     <input type="hidden" value="<%=product.productData.Id%>" name="productId">
+     <button type="submit" class="btn">Remove</button>
+   </form>
+   </div>
+    <%})%>
+    
+    
+</ul>
+
+
+    <%}else{%>
+      <h1>Your Cart is Empty</h1>
+      <%}%>
+      
+</main>
+
+
+<%-include('../Includes/end.ejs')%>

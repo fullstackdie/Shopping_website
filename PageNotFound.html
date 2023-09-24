@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 page not found</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .main-header {
+        width: 100%;
+        height: 10vh;
+        background-color: #0039a6;
+        /*background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);*/
+        padding: 0 1.5rem;
+      }
+      .main-header__item-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+      }
+      main {
+        margin: 10rem;
+      }
+      .main-header__nav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .main-header__item a {
+        text-decoration: none;
+        color: #ffbc05;
+      }
+      .main-header__item a:hover,
+      .main-header__item a:active,
+      .main-header__item a.active {
+        color: white;
+      }
+      .main-header__item {
+        margin: 0 10rem 0rem;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+          <li class="main-header__item"><a href="/">Shop</a></li>
+          <li class="main-header__item">
+            <a class="active" href="/admin/add-product">Add Products</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Page Not Found!!</h1>
+    </main>
+  </body>
+</html>
